@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
-import { Twitter, MessageCircle, Download, ArrowRight, ArrowUp, Menu, Home, BarChart2, Users, Info, Zap, FileText, Flame } from 'lucide-react';
+import { Twitter, MessageCircle, Download, ArrowRight, ArrowUp, Menu, Home, BarChart2, Users, Info, Zap, FileText, Flame, PlusCircle, ImageIcon } from 'lucide-react'; // Added PlusCircle and ImageIcon
 import Features from './components/Features';
 import Tokenomics from './components/Tokenomics';
 import Community from './components/Community';
 import Roadmap from './components/Roadmap';
 import ExchangePartners from './components/ExchangePartners';
+import LowFeesSection from './components/LowFeesSection'; // Import the new component
 
 function App() {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -80,6 +81,8 @@ function App() {
               <li><a href="#tokenomics" className="hover:text-blue-400 transition-colors">Tokenomics</a></li>
               <li><a href="#community" className="hover:text-blue-400 transition-colors">Community</a></li>
               <li><a href="https://nft.memextoken.org/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">NFT</a></li>
+              {/* Added Mint Token Link */}
+              <li><a href="https://mint.memextoken.org/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">Mint Token</a></li>
             </ul>
           </nav>
 
@@ -163,6 +166,9 @@ function App() {
         {/* Features Section */}
         <Features />
 
+        {/* New Low Fees Section */}
+        <LowFeesSection />
+
         {/* Tokenomics Section */}
         <Tokenomics />
 
@@ -244,8 +250,13 @@ function App() {
               <span className="text-xs">Community</span>
             </a>
             <a href="https://nft.memextoken.org/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center text-gray-400 hover:text-blue-400 transition-colors">
-              <Info className="w-5 h-5 mb-1" />
+              <ImageIcon className="w-5 h-5 mb-1" /> {/* Changed icon to ImageIcon for NFT */}
               <span className="text-xs">NFT</span>
+            </a>
+             {/* Added Mint Token Link to Mobile Nav */}
+            <a href="https://mint.memextoken.org/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center text-gray-400 hover:text-blue-400 transition-colors">
+              <PlusCircle className="w-5 h-5 mb-1" /> {/* Using PlusCircle icon */}
+              <span className="text-xs">Mint Token</span>
             </a>
           </div>
         </nav>

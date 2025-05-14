@@ -1,4 +1,4 @@
-import { Zap, Rocket, ShoppingCart, Flame, Image, Bot, Users, Percent } from 'lucide-react';
+import { Zap, Rocket, ShoppingCart, Flame, Image, Bot, Users, Percent, PlusCircle } from 'lucide-react'; // Added PlusCircle icon
 
 const Features = () => {
   return (
@@ -52,13 +52,16 @@ const Features = () => {
               <p className="text-gray-400">Get instant support and insights with our AI-powered Telegram bot.</p>
             </div>
           </a>
-          <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl hover:transform hover:-translate-y-2 transition-transform border border-gray-700 hover:border-blue-500/50 h-full">
-            <div className="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6">
-              <Users className="text-blue-500 w-7 h-7" />
+          {/* Updated Feature */}
+          <a href="https://mint.memextoken.org/" target="_blank" rel="noopener noreferrer">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl hover:transform hover:-translate-y-2 transition-transform border border-gray-700 hover:border-blue-500/50 h-full">
+              <div className="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6">
+                <PlusCircle className="text-blue-500 w-7 h-7" /> {/* Changed icon */}
+              </div>
+              <h3 className="text-xl font-bold mb-4">Create Your Own Token</h3> {/* Updated text */}
+              <p className="text-gray-400">Mint your own tokens easily on the MemeX platform.</p> {/* New description */}
             </div>
-            <h3 className="text-xl font-bold mb-4">Community Decision-Making</h3>
-            <p className="text-gray-400">Shape the future of MemeX. Vote on key decisions and proposals.</p>
-          </div>
+          </a>
           <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl hover:transform hover:-translate-y-2 transition-transform border border-gray-700 hover:border-blue-500/50 h-full">
             <div className="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6">
               <Percent className="text-blue-500 w-7 h-7" />
