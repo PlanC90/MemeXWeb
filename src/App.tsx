@@ -107,7 +107,7 @@ function App() {
 
           {/* Holder Count */}
           <div className="text-6xl font-extrabold text-blue-400 mb-8">
-            440,000+ Holders
+            450,000+ Holders
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-16">
@@ -282,6 +282,25 @@ function App() {
               </a>
               <a href="https://t.me/MemeXGloball" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-6 h-6 text-blue-400 hover:text-blue-500" />
+              </a>
+            </div>
+            {/* Integration documents links */}
+            <div className="mt-6 flex flex-col items-center gap-2"> {/* Use flex-col and gap for vertical spacing */}
+              <a
+                href="https://github.com/ElectraProtocol/OmniXEP"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-blue-500 hover:bg-blue-600 text-black font-bold px-4 py-2 rounded-full text-sm transition-colors shadow-lg shadow-blue-500/30"
+              >
+                MemeX integration documents
+              </a>
+              <a
+                href="https://github.com/ElectraProtocol/XEP-Core"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-blue-500 hover:bg-blue-600 text-black font-bold px-4 py-2 rounded-full text-sm transition-colors shadow-lg shadow-blue-500/30"
+              >
+                Main network integration documents
               </a>
             </div>
             <p className="text-sm text-gray-400 mt-6">&copy; 2025 MemeX. All rights reserved.</p>
