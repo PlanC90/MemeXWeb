@@ -218,6 +218,13 @@ function App() {
           </div>
         </section>
 
+        {/* Contact Information */}
+        <div className="relative z-10  mt-8 text-center flex items-center justify-center h-12">
+          <p className="text-[1.45rem] text-gray-400 leading-tight"> {/* Increased font size to 1.45rem and added leading-tight */}
+            Need assistance? 🚀 DM us on <a href="https://x.com/memexairdrop" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-500">X (Twitter)</a> for direct support! 🔒
+          </p>
+        </div>
+
         {/* Scroll to Top Button */}
         {showScrollButton && (
           <button
@@ -245,10 +252,7 @@ function App() {
               <BarChart2 className="w-5 h-5 mb-1" />
               <span className="text-xs">Tokenomics</span>
             </a>
-            <a href="#community" className="flex flex-col items-center text-gray-400 hover:text-blue-400 transition-colors">
-              <Users className="w-5 h-5 mb-1" />
-              <span className="text-xs">Community</span>
-            </a>
+            {/* Removed Community link from mobile nav */}
             <a href="https://nft.memextoken.org/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center text-gray-400 hover:text-blue-400 transition-colors">
               <ImageIcon className="w-5 h-5 mb-1" /> {/* Changed icon to ImageIcon for NFT */}
               <span className="text-xs">NFT</span>
@@ -260,54 +264,47 @@ function App() {
             </a>
           </div>
         </nav>
+      </div> {/* End of max-w-screen-xl mx-auto container */}
 
-        {/* Contact Information */}
-        <div className="relative z-10  mt-8 text-center flex items-center justify-center h-12">
-          <p className="text-[1.45rem] text-gray-400 leading-tight"> {/* Increased font size to 1.45rem and added leading-tight */}
-            Need assistance? 🚀 DM us on <a href="https://x.com/memexairdrop" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-500">X (Twitter)</a> for direct support! 🔒
+      {/* Footer - Moved outside the container */}
+      <footer className="relative z-10 bg-gray-900/80 py-12">
+        <div className="container mx-auto px-4 text-center"> {/* Added container for content */}
+          <p className="text-lg text-gray-400">Legal Disclaimer</p>
+          <p className="text-sm text-gray-400 mt-2">
+            None of the information on this website should be construed as providing legal or financial advice. Please note there are always risks associated with smart contracts. MemeX is not a registered broker, analyst or investment advisor. If you have purchased $MemeX, you agree that you are not purchasing a security or investment. The MemeX team can not be held liable for any losses or taxes you may incur. You also agree that the team is representing the token is community members, and cannot modify the contract due to it being renounced. Do conduct your own due diligence and consult your financial advisor before making any investment decision.
           </p>
-        </div>
-
-        {/* Footer */}
-        <footer className="relative z-10 bg-gray-900/80 py-12">
-          <div className="text-center">
-            <p className="text-lg text-gray-400">Legal Disclaimer</p>
-            <p className="text-sm text-gray-400 mt-2">
-              None of the information on this website should be construed as providing legal or financial advice. Please note there are always risks associated with smart contracts. MemeX is not a registered broker, analyst or investment advisor. If you have purchased $MemeX, you agree that you are not purchasing a security or investment. The MemeX team can not be held liable for any losses or taxes you may incur. You also agree that the team is representing the token is community members, and cannot modify the contract due to it being renounced. Do conduct your own due diligence and consult your financial advisor before making any investment decision.
-            </p>
-            <p className="text-lg text-gray-400 mt-6">Follow us on social media</p>
-            <div className="flex justify-center gap-8 mt-4">
-              <a href="https://x.com/memexairdrop" target="_blank" rel="noopener noreferrer">
-                <Twitter className="w-6 h-6 text-blue-400 hover:text-blue-500" />
-              </a>
-              <a href="https://t.me/MemeXGloball" target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="w-6 h-6 text-blue-400 hover:text-blue-500" />
-              </a>
-            </div>
-            {/* Integration documents links */}
-            <div className="mt-6 flex flex-col items-center gap-2"> {/* Use flex-col and gap for vertical spacing */}
-              <a
-                href="https://github.com/ElectraProtocol/OmniXEP"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-blue-500 hover:bg-blue-600 text-black font-bold px-4 py-2 rounded-full text-sm transition-colors shadow-lg shadow-blue-500/30"
-              >
-                MemeX integration documents
-              </a>
-              <a
-                href="https://github.com/ElectraProtocol/XEP-Core"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-blue-500 hover:bg-blue-600 text-black font-bold px-4 py-2 rounded-full text-sm transition-colors shadow-lg shadow-blue-500/30"
-              >
-                Main network integration documents
-              </a>
-            </div>
-            <p className="text-sm text-gray-400 mt-6">&copy; 2025 MemeX. All rights reserved.</p>
-            <p className="text-sm text-gray-400 mt-2">🚀 Powered by Electra Protocol, ensuring the lowest fees, fastest transactions, and ultimate security!</p>
+          <p className="text-lg text-gray-400 mt-6">Follow us on social media</p>
+          <div className="flex justify-center gap-8 mt-4">
+            <a href="https://x.com/memexairdrop" target="_blank" rel="noopener noreferrer">
+              <Twitter className="w-6 h-6 text-blue-400 hover:text-blue-500" />
+            </a>
+            <a href="https://t.me/MemeXGloball" target="_blank" rel="noopener noreferrer">
+              <MessageCircle className="w-6 h-6 text-blue-400 hover:text-blue-500" />
+            </a>
           </div>
-        </footer>
-      </div>
+          {/* Integration documents links */}
+          <div className="mt-6 flex flex-col items-center gap-2"> {/* Use flex-col and gap for vertical spacing */}
+            <a
+              href="https://github.com/ElectraProtocol/OmniXEP"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-blue-500 hover:bg-blue-600 text-black font-bold px-4 py-2 rounded-full text-sm transition-colors shadow-lg shadow-blue-500/30"
+            >
+              MemeX integration documents
+            </a>
+            <a
+              href="https://github.com/ElectraProtocol/XEP-Core"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-blue-500 hover:bg-blue-600 text-black font-bold px-4 py-2 rounded-full text-sm transition-colors shadow-lg shadow-blue-500/30"
+            >
+              Main network integration documents
+            </a>
+          </div>
+          <p className="text-sm text-gray-400 mt-6">&copy; 2025 MemeX. All rights reserved.</p>
+          <p className="text-sm text-gray-400 mt-2">🚀 Powered by Electra Protocol, ensuring the lowest fees, fastest transactions, and ultimate security!</p>
+        </div>
+      </footer>
     </div>
   );
 }
