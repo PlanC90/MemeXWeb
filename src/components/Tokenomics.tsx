@@ -106,6 +106,14 @@ const Tokenomics = () => {
           </div>
         </div>
 
+        {/* Burning Note */}
+        <div className="mt-12 text-center">
+          <p className="text-lg text-gray-400">
+            🔥 Burning will be performed with every exchange listing. Revenue from other platforms will be burned daily. You can verify burns by checking the burn wallet.
+          </p>
+        </div>
+
+
         {/* Development Unlock Table */}
         <div className="mt-12">
           <h3 className="text-2xl font-bold mb-4 text-center">Development Share Monthly Unlock</h3>
