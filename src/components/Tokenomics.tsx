@@ -50,7 +50,7 @@ const Tokenomics = () => {
     const y = cy + radius * Math.sin(-midAngle * RADIAN);
 
     return (
-      <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central" fontSize={14} fontWeight="bold">
+      <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central" fontSize={isMobile ? 10 : 14} fontWeight="bold">
         {`${data[index].name} ${(percent * 100).toFixed(0)}%`}
       </text>
     );
@@ -100,7 +100,18 @@ const Tokenomics = () => {
                     <Cell key={`cell-${index}`} fill={entry.color} />
                   ))}
                 </Pie>
-                <Legend align="center" verticalAlign="bottom" wrapperStyle={{ fontSize: '16px' }} />
+                {isMobile ? (
+                  <div className="flex flex-wrap justify-center mt-4">
+                    {data.map((entry, index) => (
+                      <div key={`legend-${index}`} className="w-1/2 md:w-auto flex items-center mb-2 mr-4">
+                        <div className="w-4 h-4 rounded-full mr-2" style={{ backgroundColor: entry.color }}></div>
+                        <span className="text-sm">{`${entry.name} (${entry.value}%)`}</span>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <Legend align="center" verticalAlign="bottom" wrapperStyle={{ fontSize: '16px' }} />
+                )}
               </PieChart>
             </ResponsiveContainer>
           </div>

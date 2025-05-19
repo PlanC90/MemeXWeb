@@ -68,13 +68,7 @@ const ExchangePartners = () => {
             />
           </a>
           {/* Pandai */}
-          <a href="https://t.me/PandaiAirdropBot?start=ref_67fe8dabe8bbe466b20cffad" target="_blank" rel="noopener noreferrer">
-            <img
-              src="https://pbs.twimg.com/profile_images/1868247551880712192/VjrPFtaH_400x400.jpg"
-              alt="Pandai"
-              className="w-32 h-auto"
-            />
-          </a>
+          
         </div>
       </div>
     </section>
