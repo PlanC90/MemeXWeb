@@ -62,13 +62,15 @@ const Features = () => {
               <p className="text-gray-400">Mint your own tokens easily on the MemeX platform.</p> {/* New description */}
             </div>
           </a>
-          <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl hover:transform hover:-translate-y-2 transition-transform border border-gray-700 hover:border-blue-500/50 h-full">
-            <div className="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6">
-              <Percent className="text-blue-500 w-7 h-7" />
+          <a href="https://coupon.memextoken.org/" target="_blank" rel="noopener noreferrer">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl hover:transform hover:-translate-y-2 transition-transform border border-gray-700 hover:border-blue-500/50 h-full">
+              <div className="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6">
+                <Percent className="text-blue-500 w-7 h-7" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Coupon Sites</h3>
+              <p className="text-gray-400">MemeX can be used on various coupon sites for discounts.</p>
             </div>
-            <h3 className="text-xl font-bold mb-4">Coupon Sites</h3>
-            <p className="text-gray-400">MemeX can be used on various coupon sites for discounts.</p>
-          </div>
+          </a>
         </div>
       </div>
     </section>
