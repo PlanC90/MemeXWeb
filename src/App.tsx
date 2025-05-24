@@ -83,6 +83,7 @@ function App() {
               <li><a href="https://nft.memextoken.org/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">NFT</a></li>
               {/* Added Mint Token Link */}
               <li><a href="https://mint.memextoken.org/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">Mint Token</a></li>
+              <li><a href="https://coupon.memextoken.org/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">Coupon Site</a></li>
             </ul>
           </nav>
 
@@ -256,9 +257,9 @@ function App() {
               <Zap className="w-5 h-5 mb-1" />
               <span className="text-xs">Features</span>
             </a>
-            <a href="#tokenomics" className="flex flex-col items-center text-gray-400 hover:text-blue-400 transition-colors">
+            <a href="https://coupon.memextoken.org/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center text-gray-400 hover:text-blue-400 transition-colors">
               <BarChart2 className="w-5 h-5 mb-1" />
-              <span className="text-xs">Tokenomics</span>
+              <span className="text-xs">Coupon Site</span>
             </a>
             {/* Removed Community link from mobile nav */}
             <a href="https://nft.memextoken.org/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center text-gray-400 hover:text-blue-400 transition-colors">
