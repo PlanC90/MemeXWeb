@@ -43,6 +43,14 @@ const ExchangePartners = () => {
               className="w-32 h-auto"
             />
           </a>
+          {/* SHIBARIUM */}
+          <a href="https://shib.io" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://pbs.twimg.com/profile_images/1781007982236401664/Ce2gwqjc_400x400.jpg"
+              alt="SHIBARIUM"
+              className="w-32 h-auto"
+            />
+          </a>
           {/* PlanC Space */}
           <a href="https://planc.space/" target="_blank" rel="noopener noreferrer">
             <img
@@ -68,7 +76,7 @@ const ExchangePartners = () => {
             />
           </a>
           {/* Pandai */}
-          
+
         </div>
       </div>
     </section>
