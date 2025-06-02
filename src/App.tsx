@@ -246,6 +246,12 @@ function App() {
               className="relative z-10 w-40 h-40 object-cover rounded-full border-4 border-blue-500 shadow-lg shadow-blue-500/50"
               style={{ clipPath: 'circle(35%)' }}
             />
+            <img
+              src="https://pbs.twimg.com/profile_images/1781007982236401664/Ce2gwqjc_400x400.jpg"
+              alt="MemeX Token"
+              className="relative z-10 w-40 h-40 object-cover rounded-full border-4 border-blue-500 shadow-lg shadow-blue-500/50"
+              style={{ clipPath: 'circle(35%)' }}
+            />
           </div>
         </section>
 
