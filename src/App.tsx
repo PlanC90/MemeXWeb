@@ -194,6 +194,14 @@ function App() {
             >
               Claim 500,000 Tokens & Gas Token <ArrowRight className="ml-2 w-5 h-5" />
             </a>
+            <a
+              href="https://bridge.memextoken.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-500 hover:bg-blue-600 text-black font-bold px-8 py-4 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-blue-500/30 flex items-center justify-center"
+            >
+              Bridge <ArrowRight className="ml-2 w-5 h-5" />
+            </a>
             <button
               onClick={handleDownloadClick}
               className="bg-transparent border-2 border-blue-500 text-blue-500 hover:bg-blue-500/10 font-bold px-8 py-4 rounded-full transition-all flex items-center justify-center"
