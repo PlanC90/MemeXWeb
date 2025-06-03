@@ -175,7 +175,7 @@ function App() {
           </p>
 
           {/* Holder Count */}
-          <div className="text-6xl font-extrabold text-blue-400 mb-8">1,090,000+ Holders🔥</div>
+          <div className="text-6xl font-extrabold text-blue-400 mb-8">1,140,000+ Holders🔥</div>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-16">
             <a
