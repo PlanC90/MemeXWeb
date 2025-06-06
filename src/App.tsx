@@ -15,14 +15,14 @@ import {
   Flame,
   PlusCircle,
   ImageIcon,
-} from 'lucide-react'; // Added PlusCircle and ImageIcon
+} from 'lucide-react';
 import Features from './components/Features';
 import Tokenomics from './components/Tokenomics';
 import Community from './components/Community';
 import Roadmap from './components/Roadmap';
 import ExchangePartners from './components/ExchangePartners';
-import LowFeesSection from './components/LowFeesSection'; // Import the new component
-import BridgeSection from './components/BridgeSection'; // Import the new component
+import LowFeesSection from './components/LowFeesSection';
+import BridgeSection from './components/BridgeSection';
 
 function App() {
   const [showScrollButton, setShowScrollButton] = useState(false);
