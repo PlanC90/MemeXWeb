@@ -289,6 +289,30 @@ function App() {
           </div>
         </section>
 
+        {/* Coupon Site Section */}
+        <section className="relative z-10 py-20 bg-gradient-to-b from-transparent to-blue-900/20">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-4xl font-bold mb-6">Unlock Exclusive Savings with MemeX Coupons!</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+              Discover exclusive discounts and offers using MemeX on our dedicated coupon site. But it's not
+              just about saving – it's about earning too! Share your affiliate links and let hundreds of
+              thousands of users discover the benefits of MemeX while you earn passive income.
+            </p>
+            <p className="text-xl text-blue-400 max-w-3xl mx-auto mb-10 font-bold">
+              Companies can also publish their discount codes here instead of paying for advertising, turning
+              marketing costs into direct savings for their customers!
+            </p>
+            <a
+              href="https://coupon.memextoken.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-blue-500 hover:bg-blue-600 text-black font-bold px-10 py-4 rounded-full text-lg transition-all transform hover:scale-105 shadow-lg shadow-blue-500/30"
+            >
+              Explore the Coupon Site
+            </a>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="relative z-10 py-20 bg-gradient-to-b from-transparent to-blue-900/20">
           <div className="container mx-auto px-4 text-center">
