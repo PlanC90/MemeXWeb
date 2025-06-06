@@ -51,6 +51,14 @@ const ExchangePartners = () => {
               className="w-32 h-auto"
             />
           </a>
+          {/* OMAX */}
+          <a href="https://omaxcoin.com/" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://pbs.twimg.com/profile_images/1770163638512373760/TYC8AghW_400x400.jpg"
+              alt="OMAX"
+              className="w-32 h-auto"
+            />
+          </a>
           {/* PlanC Space */}
           <a href="https://planc.space/" target="_blank" rel="noopener noreferrer">
             <img

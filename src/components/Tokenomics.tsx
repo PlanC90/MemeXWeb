@@ -1,157 +1,233 @@
-import React, { useRef, useEffect, useState } from 'react';
-import { PieChart, Pie, Cell, ResponsiveContainer, Legend } from 'recharts';
+import { useState, useEffect } from 'react';
+import {
+  Twitter,
+  MessageCircle,
+  Download,
+  ArrowRight,
+  ArrowUp,
+  Menu,
+  Home,
+  BarChart2,
+  Users,
+  Info,
+  Zap,
+  FileText,
+  Flame,
+  PlusCircle,
+  ImageIcon,
+} from 'lucide-react'; // Added PlusCircle and ImageIcon
+import Features from './components/Features';
+import Tokenomics from './components/Tokenomics';
+import Community from './components/Community';
+import Roadmap from './components/Roadmap';
+import ExchangePartners from './components/ExchangePartners';
+import LowFeesSection from './components/LowFeesSection'; // Import the new component
 
-const Tokenomics = () => {
-  const totalSupplyRef = useRef(null);
-  const tokenDistributionRef = useRef(null);
-  const [isMobile, setIsMobile] = useState(false);
+function App() {
+  const [showScrollButton, setShowScrollButton] = useState(false);
 
-  const handleResize = () => {
-    setIsMobile(window.innerWidth < 768); // Adjust breakpoint as needed
+  const handleDownloadClick = () => {
+    const deviceType = navigator.userAgent.toLowerCase();
+    let targetUrl =
+      'https://play.google.com/store/apps/details?id=com.electraprotocol.omnixep.wallet';
+
+    if (deviceType.includes('android')) {
+      targetUrl =
+        'https://play.google.com/store/apps/details?id=com.electraprotocol.omnixep.wallet';
+    } else if (
+      deviceType.includes('ios') ||
+      deviceType.includes('iphone') ||
+      deviceType.includes('ipad')
+    ) {
+      targetUrl = 'https://apps.apple.com/us/app/omnixep-wallet/id6739203200';
+    } else if (deviceType.includes('windows')) {
+      targetUrl =
+        'https://github.com/ElectraProtocol/Electra-Protocol-data/releases/download/omnixep-launcher-1.0.0/OmniXEP-Pro-Windows-installer.exe';
+    } else if (deviceType.includes('mac')) {
+      targetUrl =
+        'https://github.com/ElectraProtocol/Electra-Protocol-data/releases/download/omnixep-launcher-1.0.0/OmniXEP-Pro-macOS-installer.dmg';
+    }
+
+    window.location.href = targetUrl;
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
   };
 
   useEffect(() => {
-    window.addEventListener('resize', handleResize);
-    handleResize(); // Initial check
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  useEffect(() => {
-    const setEqualHeight = () => {
-      if (totalSupplyRef.current && tokenDistributionRef.current && !isMobile) {
-        const totalSupplyHeight = totalSupplyRef.current.offsetHeight;
-        tokenDistributionRef.current.style.height = `${totalSupplyHeight}px`;
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setShowScrollButton(true);
+      } else {
+        setShowScrollButton(false);
       }
     };
 
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768); // Adjust breakpoint as needed
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
     };
-
-    setEqualHeight();
-    window.addEventListener('resize', setEqualHeight);
-    return () => window.removeEventListener('resize', setEqualHeight);
-  }, [isMobile]);
-
-  const data = [
-    { name: 'Airdrop', value: 11.67, color: '#2563EB' },
-    { name: 'Marketing', value: 15, color: '#10B981' },
-    { name: 'Development', value: 10, color: '#EAB308' },
-    { name: 'Burn', value: 63.33, color: '#DC2626' },
-  ];
-
-  const RADIAN = Math.PI / 180;
-  const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
-    const radius = innerRadius + (outerRadius - innerRadius) * 0.6;
-    const x = cx + radius * Math.cos(-midAngle * RADIAN);
-    const y = cy + radius * Math.sin(-midAngle * RADIAN);
-
-    return (
-      <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central" fontSize={isMobile ? 10 : 14} fontWeight="bold">
-        {`${data[index].name} ${(percent * 100).toFixed(0)}%`}
-      </text>
-    );
-  };
-
-  const developmentUnlockData = Array.from({ length: 12 }, (_, i) => ({
-    month: i + 1,
-    percentage: 8.33,
-    cumulative: parseFloat((8.33 * (i + 1)).toFixed(2)),
-  }));
-
-  developmentUnlockData[11].cumulative = 100;
+  }, []);
 
   return (
-    <section id="tokenomics" className="relative z-10 py-20">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-12 text-center">Tokenomics</h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          {/* Left Side: Total Supply */}
-          <div className="flex flex-col justify-center items-center">
-            <div className="relative w-full">
-              <div className="absolute inset-0 bg-blue-500 rounded-full filter blur-xl opacity-20"></div>
-              <div className="relative z-10 bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 text-center">
-                <h3 className="text-xl font-bold mb-4 text-blue-500 md:text-base">Total Supply</h3>
-                <p className="text-4xl font-bold mb-6 break-words md:text-3xl">30T MEMEX</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Side: Donut Chart */}
-          <div className="flex flex-col items-center">
-            <h3 className="text-xl font-bold mb-4 text-center md:text-base">Allocation</h3>
-            <ResponsiveContainer width="100%" height={400}>
-              <PieChart>
-                <Pie
-                  data={data}
-                  cx="50%"
-                  cy="50%"
-                  labelLine={false}
-                  label={renderCustomizedLabel}
-                  outerRadius={160}
-                  innerRadius={50}
-                  fill="#8884d8"
-                  dataKey="value"
-                >
-                  {data.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={entry.color} />
-                  ))}
-                </Pie>
-                {isMobile ? (
-                  <div className="flex flex-wrap justify-center mt-4">
-                    {data.map((entry, index) => (
-                      <div key={`legend-${index}`} className="w-1/2 md:w-auto flex items-center mb-2 mr-4">
-                        <div className="w-4 h-4 rounded-full mr-2" style={{ backgroundColor: entry.color }}></div>
-                        <span className="text-sm">{`${entry.name} (${entry.value}%)`}</span>
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <Legend align="center" verticalAlign="bottom" wrapperStyle={{ fontSize: '16px' }} />
-                )}
-              </PieChart>
-            </ResponsiveContainer>
-          </div>
-        </div>
-
-        {/* Burning Note */}
-        <div className="mt-12 text-center">
-          <p className="text-lg text-gray-400">
-            🔥 Burning will be performed with every exchange listing. Revenue from other platforms will be burned daily. You can verify burns by checking the burn wallet.
-          </p>
-        </div>
-
-
-        {/* Development Unlock Table */}
-        <div className="mt-12">
-          <h3 className="text-2xl font-bold mb-4 text-center">Development Share Monthly Unlock</h3>
-          <div className="overflow-x-auto">
-            <table className="min-w-full bg-transparent border border-gray-700 rounded-2xl">
-              <thead className="text-white">
-                <tr>
-                  <th className="px-4 py-2 border-b border-gray-700">Month</th>
-                  <th className="px-4 py-2 border-b border-gray-700">Monthly Unlock (%)</th>
-                  <th className="px-4 py-2 border-b border-gray-700">Cumulative Unlock (%)</th>
-                </tr>
-              </thead>
-              <tbody>
-                {developmentUnlockData.map((item) => (
-                  <tr key={item.month} className="text-center">
-                    <td className="px-4 py-2 border-b border-gray-700">{item.month}</td>
-                    <td className="px-4 py-2 border-b border-gray-700">{item.percentage}</td>
-                    <td className="px-4 py-2 border-b border-gray-700">{item.cumulative}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
+    <div className="min-h-screen bg-black text-white overflow-x-hidden">
+      {/* Background Elements */}
+      <div className="fixed inset-0 z-0 overflow-hidden">
+        <div className="absolute -top-20 -left-20 w-96 h-96 bg-blue-500 rounded-full filter blur-[150px] opacity-20"></div>
+        <div className="absolute top-1/3 -right-20 w-96 h-96 bg-blue-500 rounded-full filter blur-[150px] opacity-20"></div>
+        <div className="absolute -bottom-20 left-1/3 w-96 h-96 bg-blue-500 rounded-full filter blur-[150px] opacity-20"></div>
       </div>
-    </section>
-  );
-};
 
-export default Tokenomics;
+      {/* Main Content Container */}
+      <div className="max-w-screen-xl mx-auto">
+        {/* Header */}
+        <header className="relative z-10 container mx-auto px-4 py-6 flex justify-between items-center">
+          <div className="flex items-center gap-2">
+            <img
+              src="https://cdn.glitch.global/cdada319-8cc1-41a7-ab15-329ec6fc30a0/memexlogo.jpg"
+              alt="MemeX Logo"
+              className="w-14 h-14 object-cover rounded-full border-2 border-blue-500 shadow-lg shadow-blue-500/30"
+              style={{ clipPath: 'circle(35%)' }}
+            />
+            <span className="font-bold text-2xl tracking-tight">MEMEX</span>
+          </div>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:block">
+            <ul className="flex gap-8">
+              <li>
+                <a href="#" className="hover:text-blue-400 transition-colors">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#features" className="hover:text-blue-400 transition-colors">
+                  Features
+                </a>
+              </li>
+              <li>
+                <a href="#tokenomics" className="hover:text-blue-400 transition-colors">
+                  Tokenomics
+                </a>
+              </li>
+              <li>
+                <a href="#community" className="hover:text-blue-400 transition-colors">
+                  Community
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://nft.memextoken.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-blue-400 transition-colors"
+                >
+                  NFT
+                </a>
+              </li>
+              {/* Added Mint Token Link */}
+              <li>
+                <a
+                  href="https://mint.memextoken.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-blue-400 transition-colors"
+                >
+                  Mint Token
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://coupon.memextoken.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-blue-400 transition-colors"
+                >
+                  Coupon Site
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+
+        {/* Hero Section */}
+        <section className="relative z-10 container mx-auto px-4 py-20 flex flex-col items-center text-center">
+          <div className="animate-pulse inline-block px-4 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-blue-400 text-sm font-medium mb-6">
+            🔥 Airdrop Live Now! 🔥
+          </div>
+          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+            Super Fast, Super Cheap, <br />
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-600">
+              Super Fun! 🚀
+            </span>
+          </h1>
+          <p className="text-xl text-gray-400 max-w-2xl mb-4">
+            A next-generation meme token with real-world utility: Experience ultra-fast transfers,
+            near-zero fees, and a community-driven token powered by AI and NFTs.
+          </p>
+          <p className="text-xl text-blue-400 max-w-3xl mx-auto mb-10 font-bold">
+            MemeX: A 100% Decentralized Community Project on the Electraprotocol Network!
+          </p>
+
+          {/* Holder Count */}
+          <div className="text-6xl font-extrabold text-blue-400 mb-8">1,300,000+ Holders🔥</div>
+
+          <div className="flex flex-col sm:flex-row gap-4 mb-16">
+            <a
+              href="https://memex1.planc.space"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-500 hover:bg-blue-600 text-black font-bold px-8 py-4 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-blue-500/30 flex items-center justify-center"
+            >
+              Claim 2,000,000 Tokens <ArrowRight className="ml-2 w-5 h-5" />
+            </a>
+            <a
+              href="https://gas.memextoken.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-500 hover:bg-blue-600 text-black font-bold px-8 py-4 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-blue-500/30 flex items-center justify-center"
+            >
+              Claim 500,000 Tokens & Gas Token <ArrowRight className="ml-2 w-5 h-5" />
+            </a>
+            <a
+              href="https://bridge.memextoken.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-500 hover:bg-blue-600 text-black font-bold px-8 py-4 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-blue-500/30 flex items-center justify-center"
+            >
+              Bridge <ArrowRight className="ml-2 w-5 h-5" />
+            </a>
+            <button
+              onClick={handleDownloadClick}
+              className="bg-transparent border-2 border-blue-500 text-blue-500 hover:bg-blue-500/10 font-bold px-8 py-4 rounded-full transition-all flex items-center justify-center"
+            >
+              <Download className="mr-2 w-5 h-5" /> Download Wallet
+            </button>
+            <a
+              href="https://electraprotocol.network/omni/property/199/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-transparent border-2 border-blue-500 text-blue-500 hover:bg-blue-500/10 font-bold px-8 py-4 rounded-full transition-all flex items-center justify-center"
+            >
+              Contract <FileText className="ml-2 w-5 h-5" />
+            </a>
+            <a
+              href="https://electraprotocol.network/omni/address/xBURNomniXEPXXXXXXXXXXXXXXXXbWWsD9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-transparent border-2 border-blue-500 text-blue-500 hover:bg-blue-500/10 font-bold px-8 py-4 rounded-full transition-all flex items-center justify-center"
+            >
+              BURN <Flame className="ml-2 w-5 h-5" />
+            </a>
+          </div>
+
+          {/* Token Image */}
+          <div className="relative mb-10 flex items-center justify-center">
+            <div className="absolute inset-0 bg-blue-500 rounded-full filter blur-3xl opacity-30"></div>
+            <div
+              className="w-40 h-40 rounded-full border-

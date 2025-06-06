@@ -22,6 +22,7 @@ import Community from './components/Community';
 import Roadmap from './components/Roadmap';
 import ExchangePartners from './components/ExchangePartners';
 import LowFeesSection from './components/LowFeesSection'; // Import the new component
+import BridgeSection from './components/BridgeSection'; // Import the new component
 
 function App() {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -254,6 +255,9 @@ function App() {
 
         {/* New Low Fees Section */}
         <LowFeesSection />
+
+        {/* Bridge Section */}
+        <BridgeSection />
 
         {/* Tokenomics Section */}
         <Tokenomics />
