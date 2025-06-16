@@ -262,6 +262,24 @@ function App() {
         {/* Tokenomics Section */}
         <Tokenomics />
 
+        {/* GeckoTerminal Chart */}
+        <section className="relative z-10 py-10">
+          <div className="container mx-auto px-4">
+            <div className="overflow-hidden rounded-lg shadow-lg">
+              <iframe
+                height="400"
+                width="100%"
+                id="geckoterminal-embed"
+                title="GeckoTerminal Embed"
+                src="https://www.geckoterminal.com/omax-chain/pools/0x6a6cfcff9aff8c8702e0f97d0027c19600c70d3c?embed=1&info=0&swaps=0&grayscale=0&light_chart=0&chart_type=price&resolution=1s"
+                frameBorder="0"
+                allow="clipboard-write"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </section>
+
         {/* Roadmap Section */}
         <Roadmap />
 
