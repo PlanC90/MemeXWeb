@@ -22,7 +22,6 @@ import Community from './components/Community';
 import Roadmap from './components/Roadmap';
 import ExchangePartners from './components/ExchangePartners';
 import LowFeesSection from './components/LowFeesSection';
-import BridgeSection from './components/BridgeSection';
 
 function App() {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -179,14 +178,7 @@ function App() {
           <div className="text-6xl font-extrabold text-blue-400 mb-8">2,000,000+ Holders🔥</div>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-16">
-            <a
-              href="https://gas.memextoken.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-blue-500 hover:bg-blue-600 text-black font-bold px-8 py-4 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-blue-500/30 flex items-center justify-center"
-            >
-              Claim 500,000 Tokens & Gas Token <ArrowRight className="ml-2 w-5 h-5" />
-            </a>
+            
             <a
               href="https://bridge.memextoken.org/"
               target="_blank"
@@ -247,9 +239,6 @@ function App() {
 
         {/* New Low Fees Section */}
         <LowFeesSection />
-
-        {/* Bridge Section */}
-        <BridgeSection />
 
         {/* Tokenomics Section */}
         <Tokenomics />
