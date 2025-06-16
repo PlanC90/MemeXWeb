@@ -159,7 +159,7 @@ function App() {
         {/* Hero Section */}
         <section className="relative z-10 container mx-auto px-4 py-20 flex flex-col items-center text-center">
           <div className="animate-pulse inline-block px-4 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-blue-400 text-sm font-medium mb-6">
-            🔥 Airdrop Live Now! 🔥
+            🔥 DEX Live Now! 🔥
           </div>
           <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
             Super Fast, Super Cheap, <br />
@@ -176,17 +176,9 @@ function App() {
           </p>
 
           {/* Holder Count */}
-          <div className="text-6xl font-extrabold text-blue-400 mb-8">1,800,000+ Holders🔥</div>
+          <div className="text-6xl font-extrabold text-blue-400 mb-8">2,000,000+ Holders🔥</div>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-16">
-            <a
-              href="https://memex1.planc.space"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-blue-500 hover:bg-blue-600 text-black font-bold px-8 py-4 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-blue-500/30 flex items-center justify-center"
-            >
-              Claim 2,000,000 Tokens <ArrowRight className="ml-2 w-5 h-5" />
-            </a>
             <a
               href="https://gas.memextoken.org/"
               target="_blank"
@@ -335,18 +327,9 @@ function App() {
         <section className="relative z-10 py-20 bg-gradient-to-b from-transparent to-blue-900/20">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold mb-6">Ready to Join the Revolution?</h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10">
-              Don't miss out on your chance to claim 2,000,000 MEMEX tokens in our limited-time airdrop.
-            </p>
+            
 
-            <a
-              href="https://memex1.planc.space"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-blue-500 hover:bg-blue-600 text-black font-bold px-10 py-4 rounded-full text-lg transition-all transform hover:scale-105 shadow-lg shadow-blue-500/30"
-            >
-              Claim Your Airdrop Now
-            </a>
+            
           </div>
         </section>
 

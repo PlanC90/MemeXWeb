@@ -8,13 +8,6 @@ const Features = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl hover:transform hover:-translate-y-2 transition-transform border border-gray-700 hover:border-blue-500/50 h-full">
             <div className="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6">
-              <Rocket className="text-blue-500 w-7 h-7" />
-            </div>
-            <h3 className="text-xl font-bold mb-4">Free Airdrop</h3>
-            <p className="text-gray-400">Claim 2,000,000 tokens now. Limited time offer for early adopters.</p>
-          </div>
-          <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl hover:transform hover:-translate-y-2 transition-transform border border-gray-700 hover:border-blue-500/50 h-full">
-            <div className="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6">
               <Zap className="text-blue-500 w-7 h-7" />
             </div>
             <h3 className="text-xl font-bold mb-4">Ultra-Low Fees</h3>
