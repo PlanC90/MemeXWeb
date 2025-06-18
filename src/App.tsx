@@ -178,7 +178,15 @@ function App() {
           <div className="text-6xl font-extrabold text-blue-400 mb-8">2,000,000+ Holders🔥</div>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-16">
-            
+            {/* Added OMEMEX DEX Button */}
+            <a
+              href="https://swap.omax.app/swap"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-500 hover:bg-blue-600 text-black font-bold px-8 py-4 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-blue-500/30 flex items-center justify-center"
+            >
+              OMEMEX DEX <ArrowRight className="ml-2 w-5 h-5" />
+            </a>
             <a
               href="https://bridge.memextoken.org/"
               target="_blank"
