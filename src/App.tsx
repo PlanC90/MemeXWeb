@@ -89,7 +89,7 @@ function App() {
         <header className="relative z-10 container mx-auto px-4 py-6 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <img
-              src="https://cdn.glitch.global/cdada319-8cc1-41a7-ab15-329ec6fc30a0/memexlogo.jpg"
+              src="https://apricot-rational-booby-281.mypinata.cloud/ipfs/bafkreiefc5b7xm4cua4w6vus4bcgre74dijhxezxov34de67dvxvqifxua"
               alt="MemeX Logo"
               className="w-14 h-14 object-cover rounded-full border-2 border-blue-500 shadow-lg shadow-blue-500/30"
               style={{ clipPath: 'circle(35%)' }}
@@ -219,7 +219,7 @@ function App() {
               style={{ clipPath: 'circle(35%)' }}
             >
               <img
-                src="https://cdn.glitch.global/cdada319-8cc1-41a7-ab15-329ec6fc30a0/memexlogo.jpg"
+                src="https://apricot-rational-booby-281.mypinata.cloud/ipfs/bafkreiefc5b7xm4cua4w6vus4bcgre74dijhxezxov34de67dvxvqifxua"
                 alt="MemeX Logo"
                 className="w-full h-full object-cover rounded-full"
                 style={{ clipPath: 'circle(35%)' }}

@@ -43,7 +43,7 @@ const BridgeSection = () => {
           {/* Image */}
           <div className="flex justify-center">
             <img
-              src="https://cdn.glitch.global/cdada319-8cc1-41a7-ab15-329ec6fc30a0/memexlogo.jpg"
+              src="https://apricot-rational-booby-281.mypinata.cloud/ipfs/bafkreiefc5b7xm4cua4w6vus4bcgre74dijhxezxov34de67dvxvqifxua"
               alt="MemeX Bridging"
               className="rounded-2xl shadow-lg"
               style={{ width: '400px', height: 'auto', objectFit: 'cover' }}
