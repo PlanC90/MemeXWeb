@@ -22,6 +22,7 @@ import Community from './components/Community';
 import Roadmap from './components/Roadmap';
 import ExchangePartners from './components/ExchangePartners';
 import LowFeesSection from './components/LowFeesSection';
+import OmemexStats from './components/OmemexStats'; // Import the new component
 
 function App() {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -242,6 +243,9 @@ function App() {
           </div>
         </section>
 
+        {/* OMEMEX Stats Section - Added Here */}
+        <OmemexStats />
+
         {/* Features Section */}
         <Features />
 
@@ -315,9 +319,8 @@ function App() {
         <section className="relative z-10 py-20 bg-gradient-to-b from-transparent to-blue-900/20">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold mb-6">Ready to Join the Revolution?</h2>
-            
 
-            
+
           </div>
         </section>
 
