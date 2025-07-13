@@ -9,7 +9,7 @@ const ExchangePartners = () => {
           {/* BingX */}
           <a href="https://bingx.com/en/accounts/partner/Memex" target="_blank" rel="noopener noreferrer">
             <img
-              src="https://cdn.glitch.global/c0240ef5-b1d3-409c-a790-588d18d5cf32/bingx.jpg"
+              src="https://pbs.twimg.com/profile_images/1927213403673636867/fAXIdHr__400x400.jpg"
               alt="BingX"
               className="w-32 h-auto"
             />
@@ -17,7 +17,7 @@ const ExchangePartners = () => {
           {/* Bybit */}
           <a href="https://www.bybit.com/en/sign-up?affiliate_id=122882&group_id=986951&group_type=1&ref_code=122882" target="_blank" rel="noopener noreferrer">
             <img
-              src="https://cdn.glitch.global/c0240ef5-b1d3-409c-a790-588d18d5cf32/bybit.jpg"
+              src="https://pbs.twimg.com/profile_images/1894706611538530304/w9AEcEL8_400x400.jpg"
               alt="Bybit"
               className="w-32 h-auto"
             />

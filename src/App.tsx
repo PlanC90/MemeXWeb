@@ -22,7 +22,7 @@ import Community from './components/Community';
 import Roadmap from './components/Roadmap';
 import ExchangePartners from './components/ExchangePartners';
 import LowFeesSection from './components/LowFeesSection';
-import OmemexStats from './components/OmemexStats'; // Import the new component
+// Removed OmemexStats import
 
 function App() {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -179,20 +179,12 @@ function App() {
           <div className="text-6xl font-extrabold text-blue-400 mb-8">2,000,000+ Holders🔥</div>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-16">
-            {/* Added OMEMEX DEX Button */}
-            <a
-              href="https://swap.omax.app/swap"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-blue-500 hover:bg-blue-600 text-black font-bold px-8 py-4 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-blue-500/30 flex items-center justify-center"
-            >
-              OMEMEX DEX <ArrowRight className="ml-2 w-5 h-5" />
-            </a>
+            {/* Removed OMEMEX DEX Button */}
             <a
               href="https://bridge.memextoken.org/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-500 hover:bg-blue-600 text-black font-bold px-8 py-4 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-blue-500/30 flex items-center justify-center"
+              className="bg-blue-500 hover:bg-blue-600 text-black font-bold px-8 py-4 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-500/30 flex items-center justify-center"
             >
               Bridge <ArrowRight className="ml-2 w-5 h-5" />
             </a>
@@ -202,6 +194,14 @@ function App() {
             >
               <Download className="mr-2 w-5 h-5" /> Download Wallet
             </button>
+            <a
+              href="https://www.launchmynft.io/collections/6keJc3b3easAvEqVHWxsq54nHKEDAhhzFbh8kVP7cgqb/gUWJeLSnBzNA40hIEBcF"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-transparent border-2 border-blue-500 text-blue-500 hover:bg-blue-500/10 font-bold px-8 py-4 rounded-full transition-all flex items-center justify-center"
+            >
+              SOL NFT
+            </a>
             <a
               href="https://electraprotocol.network/omni/property/199/"
               target="_blank"
@@ -243,8 +243,51 @@ function App() {
           </div>
         </section>
 
-        {/* OMEMEX Stats Section - Added Here */}
-        <OmemexStats />
+        {/* DEX Section */}
+        <section className="relative z-10 py-20 bg-gradient-to-b from-transparent to-blue-900/20">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-4xl font-bold mb-6">Explore Our DEX Partners</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-10">
+              Trade MemeX on these decentralized exchanges for the best rates and liquidity.
+            </p>
+            <div className="flex flex-wrap justify-center gap-8">
+              <a
+                href="https://swap.omax.app/swap"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-500 hover:bg-blue-600 text-black font-bold px-8 py-4 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-blue-500/30"
+              >
+                OMAX SWAP
+              </a>
+              <a
+                href="https://app.uniswap.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-500 hover:bg-blue-600 text-black font-bold px-8 py-4 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-blue-500/30"
+              >
+                UNISWAP
+              </a>
+              <a
+                href="https://hyperswap.pro/tr/swap?inputCurrency=ETH&outputCurrency=0x9437F9DCab77688221878b1a111Def408f43eC5a&chainId=463"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-500 hover:bg-blue-600 text-black font-bold px-8 py-4 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-blue-500/30"
+              >
+                HYPERSWAP
+              </a>
+              <a
+                href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=AsjP9VyKUSuLSeycoTb9AqGs3PH6BWAvqDoKmxrWpump"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-500 hover:bg-blue-600 text-black font-bold px-8 py-4 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-blue-500/30"
+              >
+                PUMPSWAP
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Removed OMEMEX Stats Section */}
 
         {/* Features Section */}
         <Features />
