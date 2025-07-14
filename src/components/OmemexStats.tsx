@@ -103,7 +103,7 @@ const OmemexStats = () => {
   return (
     <section className="relative z-10 py-10 bg-gradient-to-b from-transparent to-blue-900/10">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-4xl font-bold mb-10">OMEMEX Live Stats</h2>
+        <h2 className="text-4xl font-bold mb-10">MEMEXSOL Live Stats</h2>
         {loading && <p className="text-blue-400">Loading stats...</p>}
         {/* Show error only if there is an error and not loading */}
         {!loading && error && <p className="text-red-500">{error}</p>}
