@@ -152,6 +152,17 @@ function App() {
                   Coupon Site
                 </a>
               </li>
+               {/* Added Poll Area Link */}
+               <li>
+                <a
+                  href="https://pollarea.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-blue-400 transition-colors"
+                >
+                  Poll Area
+                </a>
+              </li>
             </ul>
           </nav>
         </header>
@@ -358,6 +369,25 @@ function App() {
           </div>
         </section>
 
+        {/* Poll Area Section */}
+        <section className="relative z-10 py-20 bg-gradient-to-b from-transparent to-blue-900/20">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-4xl font-bold mb-6">Poll AREA</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+              MemeX polls allow you to earn MEMEX tokens if your predictions are correct. By creating a poll, you automatically earn 1% of the pool!
+            </p>
+            <a
+              href="https://pollarea.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-blue-500 hover:bg-blue-600 text-black font-bold px-10 py-4 rounded-full text-lg transition-all transform hover:scale-105 shadow-lg shadow-blue-500/30"
+            >
+              Go to Poll Area
+            </a>
+          </div>
+        </section>
+
+
         {/* CTA Section */}
         <section className="relative z-10 py-20 bg-gradient-to-b from-transparent to-blue-900/20">
           <div className="container mx-auto px-4 text-center">
@@ -442,6 +472,16 @@ function App() {
             >
               <PlusCircle className="w-5 h-5 mb-1" /> {/* Using PlusCircle icon */}
               <span className="text-xs">Mint Token</span>
+            </a>
+             {/* Added Poll Area Link to Mobile Nav */}
+             <a
+              href="https://pollarea.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center text-gray-400 hover:text-blue-400 transition-colors"
+            >
+              <BarChart2 className="w-5 h-5 mb-1" /> {/* Using BarChart2 icon */}
+              <span className="text-xs">Poll Area</span>
             </a>
           </div>
         </nav>

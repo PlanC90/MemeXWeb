@@ -1,73 +1,89 @@
-import { Zap, Rocket, ShoppingCart, Flame, Image, Bot, Users, Percent, PlusCircle } from 'lucide-react'; // Added PlusCircle icon
+import {
+  Zap,
+  Clock,
+  ShoppingCart,
+  ImageIcon,
+  Bot,
+  PlusCircle,
+  Percent,
+  BarChart2, // Import BarChart2 icon
+} from 'lucide-react';
 
-const Features = () => {
+const features = [
+  {
+    icon: <Zap className="w-8 h-8 text-blue-400" />,
+    title: 'Ultra-Low Fees',
+    description: 'Almost zero gas fees for transfers. Save money on every transaction.',
+  },
+  {
+    icon: <Clock className="w-8 h-8 text-blue-400" />,
+    title: 'Instant Transfers',
+    description: 'The fastest meme token on blockchain. Transfers complete in seconds.',
+  },
+  {
+    icon: <ShoppingCart className="w-8 h-8 text-blue-400" />,
+    title: 'Real-World Usability',
+    description: 'Spend it in stores & online. Growing merchant adoption network.',
+  },
+  {
+    icon: <ImageIcon className="w-8 h-8 text-blue-400" />,
+    title: 'NFT Integration',
+    description: 'Unique NFTs that add value to your MemeX holdings.',
+  },
+  {
+    icon: <Bot className="w-8 h-8 text-blue-400" />,
+    title: 'AI Telegram Bot',
+    description: 'Get instant support and insights with our AI-powered Telegram bot.',
+  },
+  {
+    icon: <PlusCircle className="w-8 h-8 text-blue-400" />,
+    title: 'Create Your Own Token',
+    description: 'Mint your own tokens easily on the MemeX platform.',
+  },
+  {
+    icon: <Percent className="w-8 h-8 text-blue-400" />,
+    title: 'Coupon Sites',
+    description: 'MemeX can be used on various coupon sites for discounts.',
+  },
+  // Add the new Poll AREA feature card
+  {
+    icon: <BarChart2 className="w-8 h-8 text-blue-400" />, // Use BarChart2 icon
+    title: 'Poll AREA',
+    description: 'MemeX polls allow you to earn MEMEX tokens if your predictions are correct. By creating a poll, you automatically earn 1% of the pool!',
+    link: 'https://pollarea.com/', // Add the link
+  },
+];
+
+function Features() {
   return (
-    <section id="features" className="relative z-10 py-20 bg-gray-900/50">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-16 text-center">Why Choose <span className="text-blue-500">MemeX</span>?</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl hover:transform hover:-translate-y-2 transition-transform border border-gray-700 hover:border-blue-500/50 h-full">
-            <div className="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6">
-              <Zap className="text-blue-500 w-7 h-7" />
-            </div>
-            <h3 className="text-xl font-bold mb-4">Ultra-Low Fees</h3>
-            <p className="text-gray-400">Almost zero gas fees for transfers. Save money on every transaction.</p>
-          </div>
-          <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl hover:transform hover:-translate-y-2 transition-transform border border-gray-700 hover:border-blue-500/50 h-full">
-            <div className="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6">
-              <Flame className="text-blue-500 w-7 h-7" />
-            </div>
-            <h3 className="text-xl font-bold mb-4">Instant Transfers</h3>
-            <p className="text-gray-400">The fastest meme token on blockchain. Transfers complete in seconds.</p>
-          </div>
-          <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl hover:transform hover:-translate-y-2 transition-transform border border-gray-700 hover:border-blue-500/50 h-full">
-            <div className="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6">
-              <ShoppingCart className="text-blue-500 w-7 h-7" />
-            </div>
-            <h3 className="text-xl font-bold mb-4">Real-World Usability</h3>
-            <p className="text-gray-400">Spend it in stores & online. Growing merchant adoption network.</p>
-          </div>
-          <a href="https://nft.memextoken.org/" target="_blank" rel="noopener noreferrer">
-            <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl hover:transform hover:-translate-y-2 transition-transform border border-gray-700 hover:border-blue-500/50 h-full">
-              <div className="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6">
-                <Image className="text-blue-500 w-7 h-7" />
-              </div>
-              <h3 className="text-xl font-bold mb-4">NFT Integration</h3>
-              <p className="text-gray-400">Unique NFTs that add value to your MemeX holdings.</p>
-            </div>
-          </a>
-          <a href="https://t.me/memex_gemini_bot" target="_blank" rel="noopener noreferrer">
-            <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl hover:transform hover:-translate-y-2 transition-transform border border-gray-700 hover:border-blue-500/50 h-full">
-              <div className="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6">
-                <Bot className="text-blue-500 w-7 h-7" />
-              </div>
-              <h3 className="text-xl font-bold mb-4">AI Telegram Bot</h3>
-              <p className="text-gray-400">Get instant support and insights with our AI-powered Telegram bot.</p>
-            </div>
-          </a>
-          {/* Updated Feature */}
-          <a href="https://mint.memextoken.org/" target="_blank" rel="noopener noreferrer">
-            <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl hover:transform hover:-translate-y-2 transition-transform border border-gray-700 hover:border-blue-500/50 h-full">
-              <div className="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6">
-                <PlusCircle className="text-blue-500 w-7 h-7" /> {/* Changed icon */}
-              </div>
-              <h3 className="text-xl font-bold mb-4">Create Your Own Token</h3> {/* Updated text */}
-              <p className="text-gray-400">Mint your own tokens easily on the MemeX platform.</p> {/* New description */}
-            </div>
-          </a>
-          <a href="https://coupon.memextoken.org/" target="_blank" rel="noopener noreferrer">
-            <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl hover:transform hover:-translate-y-2 transition-transform border border-gray-700 hover:border-blue-500/50 h-full">
-              <div className="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6">
-                <Percent className="text-blue-500 w-7 h-7" />
-              </div>
-              <h3 className="text-xl font-bold mb-4">Coupon Sites</h3>
-              <p className="text-gray-400">MemeX can be used on various coupon sites for discounts.</p>
-            </div>
-          </a>
+    <section id="features" className="relative z-10 py-20 bg-gradient-to-b from-transparent to-blue-900/20">
+      <div className="container mx-auto px-4 text-center">
+        <h2 className="text-4xl font-bold mb-12">Why Choose <span className="text-blue-400">MemeX?</span></h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
+            // Wrap the card content in an anchor tag if a link exists
+            <a
+              key={index}
+              href={feature.link || '#'} // Use '#' as a fallback if no link
+              target={feature.link ? '_blank' : '_self'} // Open in new tab if link exists
+              rel={feature.link ? 'noopener noreferrer' : undefined}
+              className={`
+                bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 text-left
+                border border-gray-700 hover:border-blue-500 transition-all duration-300
+                transform hover:scale-105 shadow-lg hover:shadow-blue-500/30
+                flex flex-col items-start
+                ${feature.link ? 'cursor-pointer' : ''}
+              `}
+            >
+              <div className="mb-4 p-3 bg-gray-700/50 rounded-full">{feature.icon}</div>
+              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+              <p className="text-gray-300 text-sm">{feature.description}</p>
+            </a>
+          ))}
         </div>
       </div>
     </section>
   );
-};
+}
 
 export default Features;
