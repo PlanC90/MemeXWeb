@@ -4,7 +4,7 @@ import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recha
 const data = [
   { name: 'Airdrop', value: 12000000000000 }, // 12T
   { name: 'Marketing', value: 15000000000000 }, // 15T
-  { name: 'Development', value: 10000000000000 }, // 10T
+  { name: 'Development/Team', value: 10000000000000 }, // 10T - Updated label
   { name: 'Burn', value: 63000000000000 }, // 63T
 ];
 

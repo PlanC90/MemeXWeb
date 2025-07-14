@@ -35,6 +35,13 @@ const features = [
     title: 'AI Telegram Bot',
     description: 'Get instant support and insights with our AI-powered Telegram bot.',
   },
+  // Poll AREA is now above Create Your Own Token
+  {
+    icon: <BarChart2 className="w-8 h-8 text-blue-400" />, // Use BarChart2 icon
+    title: 'Poll AREA',
+    description: 'MemeX polls allow you to earn MEMEX tokens if your predictions are correct. By creating a poll, you automatically earn 1% of the pool!',
+    link: 'https://pollarea.com/', // Add the link
+  },
   {
     icon: <PlusCircle className="w-8 h-8 text-blue-400" />,
     title: 'Create Your Own Token',
@@ -44,13 +51,6 @@ const features = [
     icon: <Percent className="w-8 h-8 text-blue-400" />,
     title: 'Coupon Sites',
     description: 'MemeX can be used on various coupon sites for discounts.',
-  },
-  // Add the new Poll AREA feature card
-  {
-    icon: <BarChart2 className="w-8 h-8 text-blue-400" />, // Use BarChart2 icon
-    title: 'Poll AREA',
-    description: 'MemeX polls allow you to earn MEMEX tokens if your predictions are correct. By creating a poll, you automatically earn 1% of the pool!',
-    link: 'https://pollarea.com/', // Add the link
   },
 ];
 
