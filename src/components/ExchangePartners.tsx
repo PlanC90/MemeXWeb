@@ -86,6 +86,27 @@ const ExchangePartners = () => {
           {/* Pandai */}
 
         </div>
+
+        {/* Listed Platforms */}
+        <h2 className="text-4xl font-bold mt-12 mb-6 text-center">Listed Platforms</h2>
+        <div className="flex justify-center gap-8 flex-wrap">
+          {/* CoinGecko */}
+          <a href="https://www.coingecko.com/tr/coins/memexsol" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://pbs.twimg.com/profile_images/1909442790343520256/b73WUiEq_400x400.png"
+              alt="CoinGecko"
+              className="w-32 h-auto"
+            />
+          </a>
+          {/* CoinPaprika */}
+          <a href="https://coinpaprika.com/tr/coin/memexsol-memexsol/" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://pbs.twimg.com/profile_images/1841078986736128000/eoD_jyCB_400x400.png"
+              alt="CoinPaprika"
+              className="w-32 h-auto"
+            />
+          </a>
+        </div>
       </div>
     </section>
   );
