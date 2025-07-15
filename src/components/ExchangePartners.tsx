@@ -78,7 +78,7 @@ const ExchangePartners = () => {
           {/* CMTitans */}
           <a href="https://cmtitans.com/" target="_blank" rel="noopener noreferrer">
             <img
-              src="https://pbs.twimg.com/profile_images/1715144782790483968/TOBZZHfS_400x400.jpg"
+              src="https://cmtitans.com/wp-content/uploads/2023/10/CMTitans-Logo-PNG-White.png"
               alt="CMTitans"
               className="w-32 h-auto"
             />
@@ -143,6 +143,14 @@ const ExchangePartners = () => {
             <img
               src="https://pbs.twimg.com/profile_images/1462287879565201409/5UYqudVs_400x400.jpg"
               alt="Dexscreener"
+              className="w-32 h-auto"
+            />
+          </a>
+          {/* MEXC */}
+          <a href="https://www.mexc.fm/tr-CT/price/memexsol" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://pbs.twimg.com/profile_images/1909803561145479168/azKyNzYL_400x400.jpg"
+              alt="MEXC"
               className="w-32 h-auto"
             />
           </a>
