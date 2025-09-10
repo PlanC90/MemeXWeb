@@ -27,14 +27,6 @@ const ExchangePartners = () => {
         {/* CRYPTO and Marketing Partners */}
         <h2 className="text-4xl font-bold mt-12 mb-6 text-center">CRYPTO and Marketing Partners</h2>
         <div className="flex justify-center gap-8 flex-wrap">
-          {/* babypoes */}
-          <a href="https://babypoes.electraprotocol.com/" target="_blank" rel="noopener noreferrer">
-            <img
-              src="https://pbs.twimg.com/profile_images/1859873069671563264/5iplL1aa_400x400.jpg"
-              alt="babypoes"
-              className="w-32 h-auto"
-            />
-          </a>
           {/* electraprotocol */}
           <a href="https://electraprotocol.com/" target="_blank" rel="noopener noreferrer">
             <img
@@ -75,16 +67,6 @@ const ExchangePartners = () => {
               className="w-32 h-auto"
             />
           </a>
-          {/* CMTitans */}
-          <a href="https://cmtitans.com/" target="_blank" rel="noopener noreferrer">
-            <img
-              src="https://cmtitans.com/wp-content/uploads/2023/10/CMTitans-Logo-PNG-White.png"
-              alt="CMTitans"
-              className="w-32 h-auto"
-            />
-          </a>
-          {/* Pandai */}
-
         </div>
 
         {/* Listed Platforms */}
